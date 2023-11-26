@@ -19,7 +19,7 @@ def predict():
         return int(pred)
         return render_template('prediction.html', firstname=sepal_length)
     else:
-        return render_template('name.html')
+        return render_template('prediction.html')
     
 
 
