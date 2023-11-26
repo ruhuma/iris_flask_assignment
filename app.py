@@ -14,9 +14,9 @@ def predict():
         petal_len = request.form['pl']
         petal_width = request.form['pw']
         model = pickle.load(open('iris.pkl','rb'))
-        #input=np.array([[sep_len,sep_width,petal_len,petal_width]]).astype(np.float64)
-        #pred=model.predict(input)
-        #print(pred)
+        input=np.array([[sep_len,sep_width,petal_len,petal_width]]).astype(np.float64)
+        pred=model.predict(input)
+        print(pred)
         return render_template('prediction.html', output=sep_width)
     else:
         return render_template('prediction.html')
